@@ -40,6 +40,7 @@ async def read_root(request: Request):
     csv_file_path = 'shabbat_times.csv'
     shabbat_time = get_shabbat_time_for_week(csv_file_path)
     return templates.TemplateResponse("index.html", {"request": request, "shabbat_time": shabbat_time})
+    # return templates.TemplateResponse("index.html", {"request": request, "shabbat_time": ""})
 
 
 if __name__ == '__main__':
